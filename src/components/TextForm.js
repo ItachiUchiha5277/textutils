@@ -44,6 +44,21 @@ export default function TextForm(props) {
     let second = '0.' + minutes.toString().split('.')[1]
     let final = parseFloat(second) * 60
 
+    const disableButtons = (btns) => {
+        btns.forEach((btn) => {
+            btn.setAttribute("disabled", "disabled")
+        })
+    }
+
+    if (text.length === 0) {
+        disableButtons(document.querySelectorAll('.btn'))
+    }
+    else {
+        document.querySelectorAll('.btn').forEach((btn) => {
+            btn.removeAttribute("disabled", "disabled")
+        })
+    }
+
     return (
         <>
             <div>
