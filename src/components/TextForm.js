@@ -52,15 +52,15 @@ export default function TextForm(props) {
 
                     <textarea className="form-control" id="exampleFormControlTextarea1" id="textarea" rows="8" placeholder="Enter text here" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode === 'dark' ? '#1f232e' : 'white', color: props.mode === 'dark' ? 'white' : 'black' }}></textarea>
 
-                    <button type="button" disabled={text.length===0} onClick={handleUpClick} className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3`}>Convert to <b>UPPERCASE</b> </button>
+                    <button type="button" onClick={handleUpClick} className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3 ${text.length===0?'disabled':''}`}>Convert to <b>UPPERCASE</b> </button>
 
-                    <button type="button" disabled={text.length===0} onClick={handleLoClick} className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3 mx-2`}>Convert to <b>lowercase</b> </button>
+                    <button type="button" onClick={handleLoClick} className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3 mx-2 ${text.length===0?'disabled':''}`}>Convert to <b>lowercase</b> </button>
 
-                    <button type="button" disabled={text.length===0} className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3`} onClick={clearText}>Clear Text</button>
+                    <button type="button" className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3 ${text.length===0?'disabled':''}`} onClick={clearText}>Clear Text</button>
 
-                    <button type="button" disabled={text.length===0} className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3 mx-2`} onClick={removeExtraSpaces}>Remove extra spaces</button>
+                    <button type="button" className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3 mx-2 ${text.length===0?'disabled':''}`} onClick={removeExtraSpaces}>Remove extra spaces</button>
 
-                    <button type="button" disabled={text.length===0} className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3`} onClick={copyText}>Copy Text</button>
+                    <button type="button" className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3 ${text.length===0?'disabled':''}`} onClick={copyText}>Copy Text</button>
                 </div>
                 <hr style={{ color: props.mode === 'dark' ? 'white' : 'black' }} />
                 <div style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
