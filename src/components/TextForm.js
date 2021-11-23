@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from "framer-motion"
 
 export default function TextForm(props) {
     const handleUpClick = () => {
@@ -46,7 +47,11 @@ export default function TextForm(props) {
 
     return (
         <>
-            <div>
+            <motion.div 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: 0.6}}
+            >
                 <div className="mb-3 my-3" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
                     <h1>{props.heading}</h1>
 
@@ -79,7 +84,7 @@ export default function TextForm(props) {
                         <p>{text.length!==0 ? text : 'Nothing to preview here'}</p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }

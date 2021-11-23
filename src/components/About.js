@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function About(props) {
     let myStyle = {
@@ -10,8 +11,12 @@ export default function About(props) {
         color: props.mode === 'dark' ? 'white' : 'black',
     }
     return (
-        <div>
-            <h1 className="my-5" style={{color: props.mode==='dark'?'white':'black'}}>About TextUtils</h1>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+        >
+            <h1 className="my-5" style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>About TextUtils</h1>
             <div className="accordion" id="accordionExample" style={myStyle}>
                 <div className="accordion-item" style={myStyle}>
                     <h2 className="accordion-header" id="headingOne">
@@ -50,6 +55,6 @@ export default function About(props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
