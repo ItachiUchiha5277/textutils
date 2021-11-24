@@ -1,0 +1,32 @@
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --nunito-sans: 'Nunito Sans', sans-serif;
+    --blue-hover: rgb(65, 65, 255);
+}
+
+i {
+    font-size: 1.8rem;
+    transition: color 200ms ease-in-out;
+    cursor: pointer;
+}
+i:hover {
+    color: var(--blue-hover) !important;
+}
+
+.fa-copy {
+    font-size: 1em;
+    margin: 0 0.3rem;
+}
+
+i span {
+    font-family: var(--nunito-sans);
+    font-size: 0.5em;
+    vertical-align: middle;
+    margin: 0 0.3rem;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

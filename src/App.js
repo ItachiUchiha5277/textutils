@@ -10,6 +10,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Footer from './components/Footer.js';
 
 function App() {
   const [alert, setAlert] = useState(null)
@@ -47,6 +48,8 @@ function App() {
             <Route exact path="/" element={<TextForm showAlert={showAlert} mode={mode} heading="Enter the text to analayze" />}></Route>
           </Routes>
         </div>
+
+        <Footer mode={mode}/>
 
       </Router>
     </>

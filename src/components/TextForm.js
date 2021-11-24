@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from "framer-motion"
+import './styles.css'
 
 export default function TextForm(props) {
     const handleUpClick = () => {
@@ -65,7 +66,7 @@ export default function TextForm(props) {
 
                     <button type="button" className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3 mx-2 ${text.length===0?'disabled':''}`} onClick={removeExtraSpaces}>Remove extra spaces</button>
 
-                    <button type="button" className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3 ${text.length===0?'disabled':''}`} onClick={copyText}>Copy Text</button>
+                    <button type="button" className={`btn btn-${props.mode==='dark'?'dark':'primary'} my-3 ${text.length===0?'disabled':''}`} onClick={copyText}><span class="fas fa-copy"></span>Copy Text</button>
                 </div>
                 <hr style={{ color: props.mode === 'dark' ? 'white' : 'black' }} />
                 <div style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
